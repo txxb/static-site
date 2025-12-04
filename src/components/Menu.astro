@@ -1,0 +1,26 @@
+---
+const menuItems = [
+  { name: 'Home', link: '/static-site/' },
+  { name: 'About', link: '/static-site/about' },
+  { name: 'FAQ', link: '/static-site/faq' },
+  { name: 'Documentation', link: '/static-site/documentation' },
+  { name: 'License', link: '/static-site/license' },
+  { name: 'Download', link: '/static-site/download' },
+];
+---
+
+<aside class="bg-white shadow-md w-64 h-screen py-4 px-6 fixed top-0 left-0">
+  <ul class="space-y-4">
+   <img src="/src/images/image.png" alt="Icon">
+    {menuItems.map(item => (
+      <li>
+        <a
+          href={item.link}
+          class="block text-lg font-medium px-4 py-2 rounded-lg hover:bg-gray-100 hover:text-blue-500"
+        >
+          {item.name}
+        </a>
+      </li>
+    ))}
+  </ul>
+</aside>
